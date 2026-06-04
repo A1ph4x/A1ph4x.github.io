@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="欢迎来到 A1ph4x 的博客">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="学而不思则罔，思而不学则殆">
 <title>404 Page not found</title>
 
 
@@ -13,12 +13,12 @@
 
 
 <link rel="stylesheet" href="/scss/style.min.8bba8e02dc173d25b7e5b9af53061f53bca55b543c7dc047d06087086eaa8ac3.css"><meta property='og:title' content="404 Page not found">
-<meta property='og:description' content="欢迎来到 A1ph4x 的博客">
+<meta property='og:description' content="学而不思则罔，思而不学则殆">
 <meta property='og:url' content='https://A1ph4x.gihub.io/404.html'>
 <meta property='og:site_name' content='A1ph4x'>
 <meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-06-04T00:00:00&#43;00:00 '/>
 <meta name="twitter:title" content="404 Page not found">
-<meta name="twitter:description" content="欢迎来到 A1ph4x 的博客">
+<meta name="twitter:description" content="学而不思则罔，思而不学则殆">
     <link rel="shortcut icon" href="/img/avatar.png" />
 
     </head>
@@ -68,7 +68,7 @@
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/">A1ph4x</a></h1>
-            <h2 class="site-description">欢迎来到 A1ph4x 的博客</h2>
+            <h2 class="site-description">学而不思则罔，思而不学则殆</h2>
         </div>
     </header><ol class="menu-social">
             
@@ -366,6 +366,100 @@
     });
   });
 </script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<style>
+    #TableOfContents > ul, ol {
+        ul, ol {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+              openUl.forEach((ul) => {
+                ul.classList.remove("open")
+              })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+        });
+    }
+    initTocHide()
+</script>
+
+<style>
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://A1ph4x.gihub.io/icons/backTop.svg);
+    }
+</style>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+</script>
+
+
 
     </body>
 </html>
