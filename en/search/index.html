@@ -344,35 +344,7 @@
       console.log('particles.js loaded');
     });
   });
-</script><script>
-    document.addEventListener('DOMContentLoaded', function() {
-        let viewCounts = document.querySelectorAll(".vercount");
-        if (viewCounts.length === 0) return;
-        
-        let script = document.createElement('script');
-        script.src = 'https://cn.vercount.one/js';
-        script.onload = function() {
-            let checkCount = 0;
-            let interval = setInterval(function() {
-                viewCounts.forEach(ele => {
-                    if (ele.textContent && ele.textContent !== '0') {
-                        ele.textContent = ele.textContent + ' 次浏览';
-                    }
-                });
-                
-                checkCount++;
-                if (checkCount >= 10) {
-                    clearInterval(interval);
-                }
-            }, 500);
-        };
-        script.onerror = function() {
-            console.warn('vercount script failed to load');
-        };
-        document.body.appendChild(script);
-    });
-</script>
-
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     </body>
 </html>

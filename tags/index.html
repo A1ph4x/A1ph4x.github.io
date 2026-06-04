@@ -379,6 +379,10 @@
                 CTF
             </a>
         
+            <a href="/categories/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/">
+                应急响应
+            </a>
+        
     </div>
 </section>
 
@@ -411,6 +415,10 @@
                 CTF
             </a>
         
+            <a href="/tags/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/">
+                应急响应
+            </a>
+        
     </div>
 </section>
 
@@ -429,7 +437,7 @@
 
         <div class="section-card">
             <div class="section-details">
-                <h3 class="section-count">1 个页面</h3>
+                <h3 class="section-count">2 个页面</h3>
                 <h1 class="section-term">Tags</h1>
                 
             </div>
@@ -443,7 +451,16 @@
     <a href="/tags/ctf/">
         <div class="article-details">
             <h2 class="article-title">CTF</h2>
-                <footer class="article-meta"><span class="article-description">2 个页面</span>
+                <footer class="article-meta"><span class="article-description">1 个页面</span>
+                </footer></div>
+    </a>
+</article>
+            
+                <article>
+    <a href="/tags/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/">
+        <div class="article-details">
+            <h2 class="article-title">应急响应</h2>
+                <footer class="article-meta"><span class="article-description">1 个页面</span>
                 </footer></div>
     </a>
 </article>
@@ -481,35 +498,7 @@
       console.log('particles.js loaded');
     });
   });
-</script><script>
-    document.addEventListener('DOMContentLoaded', function() {
-        let viewCounts = document.querySelectorAll(".vercount");
-        if (viewCounts.length === 0) return;
-        
-        let script = document.createElement('script');
-        script.src = 'https://cn.vercount.one/js';
-        script.onload = function() {
-            let checkCount = 0;
-            let interval = setInterval(function() {
-                viewCounts.forEach(ele => {
-                    if (ele.textContent && ele.textContent !== '0') {
-                        ele.textContent = ele.textContent + ' 次浏览';
-                    }
-                });
-                
-                checkCount++;
-                if (checkCount >= 10) {
-                    clearInterval(interval);
-                }
-            }, 500);
-        };
-        script.onerror = function() {
-            console.warn('vercount script failed to load');
-        };
-        document.body.appendChild(script);
-    });
-</script>
-
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     </body>
 </html>
